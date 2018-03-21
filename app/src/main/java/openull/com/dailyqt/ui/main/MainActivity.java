@@ -2,6 +2,7 @@ package openull.com.dailyqt.ui.main;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.view.View;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -32,6 +33,24 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
 
     @Override
     public void startInit() {
+        contentChecker();
+    }
 
+    private void contentChecker() {
+//        TODO : 리싸이클러 뷰, Content DB를 통해 데이터가 있으면 리사이클러 뷰를 동작한다.
+        int contentCount = 0;
+        if( contentCount != 0){
+            initContent();
+        }else{
+            initNoContent();
+        }
+    }
+
+    private void initNoContent() {
+        binding.mainRecyclerView.setVisibility(View.GONE);
+    }
+
+    private void initContent() {
+        binding.mainLinearLayout.setVisibility(View.GONE);
     }
 }

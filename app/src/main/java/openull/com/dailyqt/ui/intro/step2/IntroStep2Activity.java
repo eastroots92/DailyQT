@@ -1,6 +1,7 @@
 package openull.com.dailyqt.ui.intro.step2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -10,9 +11,13 @@ import android.text.TextWatcher;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Date;
+
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityIntroStep2Binding;
 import openull.com.dailyqt.ui.base.BaseActivity;
+import openull.com.dailyqt.ui.intro.step1.IntroStep1Activity;
+import openull.com.dailyqt.ui.main.MainActivity;
 
 /**
  * Created by eastroots92 on 2018-03-21.
@@ -81,14 +86,19 @@ public class IntroStep2Activity extends BaseActivity<Contract.Presenter> impleme
 
                     String userName = binding.introNameFormEditText.getText().toString();
                     setUserData(userName);
-
+                    startActivity(new Intent(IntroStep2Activity.this, MainActivity.class));
+                    finish();
                 });
             }
 
             private void setUserData(String userName) {
+                Date date = new Date(System.currentTimeMillis());
+                long day = date.getTime();
+
                 SharedPreferences sharedPref = getSharedPreferences("userData", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString("userName",userName);
+                editor.putLong("userDate",day);
                 editor.commit();
             }
         });

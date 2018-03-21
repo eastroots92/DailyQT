@@ -12,6 +12,7 @@ import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivitySplashBinding;
 import openull.com.dailyqt.ui.base.BaseActivity;
 import openull.com.dailyqt.ui.intro.step1.IntroStep1Activity;
+import openull.com.dailyqt.ui.main.MainActivity;
 
 /**
  * Created by eastroots92 on 2018-03-21.
@@ -37,8 +38,8 @@ public class SplashActivity extends BaseActivity<Contract.Presenter> implements 
     @Override
     public void changeActivity(Boolean isCurrent) {
         if (isCurrent){
-//            TODO : Main Activity로 이동
-            Log.e("확인", "유저데이터가 있어요~");
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+
         }else{
             startActivity(new Intent(SplashActivity.this, IntroStep1Activity.class));
         }

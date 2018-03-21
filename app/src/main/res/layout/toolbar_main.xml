@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBar_height"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView_startQT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textBlack"
+            android:text="큐티 시작 1일째"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:textSize="@dimen/text_inner_small"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/textView_countQT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textBlack"
+            android:text="0개의 말씀"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:textSize="@dimen/text_inner_small"
+            android:layout_weight="1"
+            android:gravity="end"
+            />
+
+    </LinearLayout>
+</layout>

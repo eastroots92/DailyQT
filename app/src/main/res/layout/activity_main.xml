@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.constraint.ConstraintLayout
-         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </android.support.constraint.ConstraintLayout>
+        <include
+            android:id="@+id/toolbar_main"
+            layout="@layout/toolbar_main"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundWhite"
+            android:paddingLeft="@dimen/margin_middle"
+            android:paddingRight="@dimen/margin_middle"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:id="@+id/main_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/backgroundWhite"
+            android:padding="@dimen/margin_large"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/textBlack"
+                android:text="@string/main_noContent"
+                android:layout_marginTop="@dimen/margin_middle"
+                />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/tabBar_main"
+            layout="@layout/tabbar_main"
+            />
+
+    </LinearLayout>
 </layout>

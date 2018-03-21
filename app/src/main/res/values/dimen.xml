@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_large">42dp</dimen>
+    <dimen name="margin_middle">16dp</dimen>
+    <dimen name="margin_inner">10dp</dimen>
 
     <dimen name="text_middle">30sp</dimen>
+    <dimen name="text_inner_small">12sp</dimen>
+    <dimen name="text_inner_middle">16sp</dimen>
+
+    <dimen name="toolBar_height">52dp</dimen>
+    <dimen name="tabBar_height">64dp</dimen>
 </resources>
