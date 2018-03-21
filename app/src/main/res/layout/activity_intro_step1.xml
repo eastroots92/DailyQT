@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/backgroundWhite"
+        android:id="@+id/activity_intro_step1"
+        android:paddingTop="@dimen/margin_large"
+        android:paddingLeft="@dimen/margin_large"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_middle"
+            android:textColor="@color/textBlack"
+            android:text="안녕,"
+            android:id="@+id/intro_firstComment"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro_firstComment"
+            android:textSize="25sp"
+            android:textColor="@color/textBlack"
+            android:id="@+id/intro_introInfo"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:text="@string/intro_info"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/intro_nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/introNext_button"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="22dp"
+            android:padding="20dp"
+            />
+
+    </RelativeLayout>
+</layout>
