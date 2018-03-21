@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -9,6 +9,8 @@
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="android:windowFullscreen">true</item>
 
         <item name="android:textViewStyle">@style/myeongjoTextView</item>
         <item name="android:editTextStyle">@style/myeongjoEditText</item>
@@ -21,5 +23,6 @@
     <style name="myeongjoEditText" parent="@android:style/Widget.DeviceDefault.EditText">
         <item name="android:fontFamily">@font/nanum_myeongjo</item>
     </style>
+
 
 </resources>

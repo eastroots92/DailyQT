@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">데일리큐티</string>
+
+    <!-- Splash Page -->
+    <string name="app_title">데일리\n큐티</string>
+    <string name="splash_subtitle">삶의 원동력이 되는\n하나님의 말씀</string>
+
+    <!-- Intro Page -->
+    <string name="intro_info">
+        데일리큐티는\n하루에 한번\n성경을 읽고\n생각을 적는\n나만의\n큐티 북이야.
+    </string>
+    <string name="introNext_button">다음으로.</string>
+    <string name="introStart_button">시작하기.</string>
+    <string name="intro_nameInfo">너의 이름이\n뭐야..?</string>
+    <string name="intro_nameForm">내\n이름은</string>
+    <string name="sample_name">멋쟁이 사자</string>
 </resources>
