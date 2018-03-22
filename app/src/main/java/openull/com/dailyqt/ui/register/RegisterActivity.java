@@ -31,6 +31,16 @@ public class RegisterActivity extends BaseActivity<Contract.Presenter> implement
 
     @Override
     public void startInit() {
+        toolbarManager();
+    }
 
+    private void toolbarManager() {
+        backButtonListener();
+    }
+
+    private void backButtonListener() {
+        binding.toolbarRegister.textViewBack.setOnClickListener(__->{
+            finish();
+        });
     }
 }

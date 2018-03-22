@@ -1,8 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundWhite"
+        >
 
-    </android.support.constraint.ConstraintLayout>
+        <include
+            android:id="@+id/toolbar_register"
+            layout="@layout/toolbar_register"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="0.1dp"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:layout_marginRight="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:background="@drawable/border_line"
+            android:padding="@dimen/margin_inner"
+            >
+
+            <EditText
+                android:id="@+id/editText_title"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:textSize="@dimen/text_inner_middle"
+                android:textColor="@color/textBlack"
+                android:background="@null"
+                android:hint="제목"
+                android:textColorHint="@color/noneColor"
+                android:fontFamily="@font/nanum_myeongjo"
+                android:gravity="left|center_vertical"
+                android:lines="1"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/noneColor"
+                />
+
+            <EditText
+                android:id="@+id/editText_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_inner_middle"
+                android:textColor="@color/textBlack"
+                android:background="@null"
+                android:hint="말씀을 입력하세요."
+                android:textColorHint="@color/noneColor"
+                android:fontFamily="@font/nanum_myeongjo"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1.2"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                >
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </layout>

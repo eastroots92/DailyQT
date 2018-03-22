@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#EFEBE5</color>
     <color name="colorAccent">#EFEBE5</color>
     <color name="backgroundWhite">#EFEBE5</color>
+    <color name="backgroundRegisterWhite">#faf8f4</color>
     <color name="textBlack">#1c1c1c</color>
     <color name="noneColor">#b8b8b8</color>
 </resources>

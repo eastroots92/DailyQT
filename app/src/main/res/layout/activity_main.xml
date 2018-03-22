@@ -8,7 +8,6 @@
         <include
             android:id="@+id/toolbar_main"
             layout="@layout/toolbar_main"
-
             />
 
         <android.support.v7.widget.RecyclerView
