@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import org.jetbrains.annotations.Nullable;
 
+import io.realm.Realm;
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityMainBinding;
+import openull.com.dailyqt.model.QTData;
 import openull.com.dailyqt.ui.base.BaseActivity;
 import openull.com.dailyqt.ui.register.RegisterActivity;
 
@@ -39,6 +42,14 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
         contentChecker();
         setDday();
         registerListener();
+
+        Realm.init(this);
+        Realm qtData_realm = Realm.getDefaultInstance();
+
+        QTData qtData = qtData_realm.where(QTData.class).findFirst();
+
+        Log.e("Title",qtData.getTitle());
+
     }
 
     private void registerListener() {

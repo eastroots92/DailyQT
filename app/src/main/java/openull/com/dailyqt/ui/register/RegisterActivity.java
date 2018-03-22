@@ -193,6 +193,7 @@ public class RegisterActivity extends BaseActivity<Contract.Presenter> implement
 
     private void RegisterManger(boolean isRegisterReady) {
         if(isRegisterReady){
+            presenter.saveQtData(contentData);
             Toast.makeText(this, "말씀이 등록 되었습니다.", Toast.LENGTH_SHORT).show();
             finish();
         }else{

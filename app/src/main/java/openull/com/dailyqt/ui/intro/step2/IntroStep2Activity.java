@@ -22,7 +22,6 @@ import java.util.Date;
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityIntroStep2Binding;
 import openull.com.dailyqt.ui.base.BaseActivity;
-import openull.com.dailyqt.ui.intro.step1.IntroStep1Activity;
 import openull.com.dailyqt.ui.main.MainActivity;
 
 /**
