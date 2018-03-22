@@ -1,5 +1,6 @@
 package openull.com.dailyqt.ui.main;
 
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +35,13 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
     @Override
     public void startInit() {
         contentChecker();
+        setDday();
+    }
+
+    private void setDday() {
+        SharedPreferences pref = getSharedPreferences("userData", MODE_PRIVATE);
+        long userDate = pref.getLong("userDate",0);
+        int dDay = presenter.calcDate(userDate);
     }
 
     private void contentChecker() {

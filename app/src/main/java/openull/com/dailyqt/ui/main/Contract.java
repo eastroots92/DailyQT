@@ -13,5 +13,8 @@ interface Contract{
     interface Presenter {
 
         void init();
+
+        int calcDate(long userDate);
+
     }
 }

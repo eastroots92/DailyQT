@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DailyQT.iml" filepath="$PROJECT_DIR$/DailyQT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dailyQT.iml" filepath="$PROJECT_DIR$/dailyQT.iml" />
     </modules>
   </component>
 </project>
