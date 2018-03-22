@@ -19,6 +19,8 @@
         <activity android:name=".ui.intro.step1.IntroStep1Activity"/>
         <activity android:name=".ui.intro.step2.IntroStep2Activity"/>
         <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.register.RegisterActivity"/>
+        <activity android:name=".ui.content.ContentActivity"/>
     </application>
 
 </manifest>
