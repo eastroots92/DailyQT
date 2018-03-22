@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -47,6 +52,31 @@ public class IntroStep2Activity extends BaseActivity<Contract.Presenter> impleme
 
     private void inputNameManager() {
         editTextChecker();
+        editTextEnter();
+    }
+
+    private void editTextEnter() {
+
+        EditText inputFinish = binding.introNameFormEditText;
+
+        inputFinish.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handled = false;
+
+                hideKeyboard(inputFinish);
+                handled = true;
+
+
+                return handled;
+            }
+
+            private void hideKeyboard(EditText inputFinish) {
+                InputMethodManager keyboard = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                keyboard.hideSoftInputFromWindow(inputFinish.getWindowToken(),0);
+            }
+        });
     }
 
     private void editTextChecker() {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@color/backgroundRegisterWhite"
+    android:textColor="@color/textBlack"
+    android:singleLine="true"
+    android:textSize="@dimen/text_inner_small_between_middle"
+    android:gravity="center"
+    android:fontFamily="@font/nanum_myeongjo_bold"
+    />

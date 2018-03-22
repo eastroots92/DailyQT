@@ -68,6 +68,8 @@
                 android:fontFamily="@font/nanum_myeongjo_bold"
                 android:layout_marginTop="10dp"
                 android:gravity="right"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
                 />
 
             <TextView

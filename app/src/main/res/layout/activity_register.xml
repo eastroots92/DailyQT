@@ -38,6 +38,8 @@
                 android:fontFamily="@font/nanum_myeongjo"
                 android:gravity="left|center_vertical"
                 android:lines="1"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
                 />
 
             <View
@@ -66,7 +68,139 @@
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:orientation="horizontal"
+                android:gravity="center_vertical"
                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <Spinner
+                        android:id="@+id/start_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:background="@color/backgroundRegisterWhite"
+                        />
+
+                    <EditText
+                        android:id="@+id/start_chapter"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="right|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textColor="@color/textBlack"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        />
+
+                    <EditText
+                        android:id="@+id/start_vers"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="left|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
+                
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1.5dp"
+                    android:background="@color/textBlack"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+
+                    <Spinner
+                        android:id="@+id/finish_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:background="@color/backgroundRegisterWhite"
+                        />
+
+                    <EditText
+                        android:id="@+id/finish_chapter"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="right|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textColor="@color/textBlack"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        />
+
+                    <EditText
+                        android:id="@+id/finish_vers"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="left|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
 

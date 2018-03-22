@@ -17,4 +17,6 @@
     <string name="intro_nameInfo">너의 이름이\n뭐야..?</string>
     <string name="intro_nameForm">내\n이름은</string>
     <string name="sample_name">멋쟁이 사자</string>
+
+    <string name="select_bible">성서를 선택해 주세요.</string>
 </resources>
