@@ -1,7 +1,9 @@
 package openull.com.dailyqt.model;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.ColorInt;
 
 /**
  * Created by eastroots92 on 2018-03-23.
@@ -9,18 +11,38 @@ import android.arch.persistence.room.PrimaryKey;
 
 @Entity
 public class Content {
-    
+
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
+    @ColumnInfo(name = "title")
     private String title;
+
+    @ColumnInfo(name = "content")
     private String content;
+
+    @ColumnInfo(name = "date")
     private long date;
+
+    @ColumnInfo(name = "startBible")
     private String startBible;
+
+    @ColumnInfo(name = "startChapter")
     private int startChapter;
+
+    @ColumnInfo(name = "startVers")
     private int startVers;
+
+    @ColumnInfo(name = "finishBible")
     private String finishBible;
+
+    @ColumnInfo(name = "finishChapter")
     private int finishChapter;
+
+    @ColumnInfo(name = "finishVers")
     private int finishVers;
+
+    @ColumnInfo(name = "qtDate")
     private int qtDate;
 
     public Content(String title, String content, long date, String startBible, int startChapter, int startVers, String finishBible, int finishChapter, int finishVers, int qtDate) {

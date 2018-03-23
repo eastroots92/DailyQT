@@ -25,7 +25,7 @@ public class ContentData {
         long myDate = date;
         long today = getDate();
 //  TODO :  제일중요!!! Dday 계산하는 것 넣어야합니다!!!!!!!!!! 현재 이거 할 차례
-        // https://www.youtube.com/watch?v=CTBiwKlO5IU    40:57
+//        https://www.youtube.com/watch?v=CTBiwKlO5IU    40:57
         this.qtDate = qtDate;
     }
 

@@ -1,20 +1,18 @@
 package openull.com.dailyqt.ui.main;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-
 import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-
+import java.util.List;
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityMainBinding;
+import openull.com.dailyqt.model.AppDatabase;
 import openull.com.dailyqt.model.Content;
 import openull.com.dailyqt.ui.base.BaseActivity;
 import openull.com.dailyqt.ui.register.RegisterActivity;
@@ -27,8 +25,9 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
 
     private ActivityMainBinding binding;
     private RecyclerView.Adapter contentAdapter;
+    private AppDatabase contentDB;
 
-    private ArrayList<Content> contents;
+    List<Content> contents;
 
     @Override
     protected Contract.Presenter buildPresenter() {
@@ -82,7 +81,14 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
 
     private void contentChecker() {
 //        TODO : 리싸이클러 뷰, Content DB를 통해 데이터가 있으면 리사이클러 뷰를 동작한다.
-        int contentCount = 1;
+
+        contentDB = Room.databaseBuilder(getApplicationContext(),AppDatabase.class, "production")
+                .allowMainThreadQueries()
+                .build();
+
+        contents = contentDB.contentDao().getAllUsers();
+
+        int contentCount = contents.size();
         if( contentCount != 0){
             initContent();
         }else{
@@ -100,11 +106,6 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
     }
 
     private void initContentList() {
-        contents = new ArrayList<>();
-
-        for (int i = 0; i < 140 ; i++) {
-
-        }
 
         binding.mainRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         contentAdapter = new ContentAdapter(contents);

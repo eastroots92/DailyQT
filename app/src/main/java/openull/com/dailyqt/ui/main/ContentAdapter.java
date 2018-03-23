@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.model.Content;
@@ -16,9 +17,9 @@ import openull.com.dailyqt.model.Content;
  */
 
 class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHolder> {
-    ArrayList<Content> contents;
+    List<Content> contents;
 
-    public ContentAdapter(ArrayList<Content> contents) {
+    public ContentAdapter(List<Content> contents) {
         this.contents = contents;
     }
 
