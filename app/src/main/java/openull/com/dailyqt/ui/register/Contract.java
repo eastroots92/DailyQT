@@ -21,7 +21,6 @@ interface Contract {
 
         void initBibleForm(Spinner startBook, Spinner finishBook);
 
-        void saveQtData(ContentData contentData);
     }
 
 }
