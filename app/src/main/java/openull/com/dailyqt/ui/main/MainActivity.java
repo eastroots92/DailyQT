@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityMainBinding;
+import openull.com.dailyqt.model.Content;
 import openull.com.dailyqt.ui.base.BaseActivity;
 import openull.com.dailyqt.ui.register.RegisterActivity;
 
@@ -27,7 +28,7 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
     private ActivityMainBinding binding;
     private RecyclerView.Adapter contentAdapter;
 
-    private ArrayList<String> contents;
+    private ArrayList<Content> contents;
 
     @Override
     protected Contract.Presenter buildPresenter() {
@@ -102,7 +103,7 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
         contents = new ArrayList<>();
 
         for (int i = 0; i < 140 ; i++) {
-            contents.add("오오오 주여!!! "+ i);
+
         }
 
         binding.mainRecyclerView.setLayoutManager(new LinearLayoutManager(this));

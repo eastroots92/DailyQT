@@ -5,7 +5,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import openull.com.dailyqt.R;
-
+import openull.com.dailyqt.model.Content;
 
 
 /**
@@ -34,6 +34,23 @@ public class RegisterPresenter implements Contract.Presenter {
         startBook.setAdapter(adapter);
         finishBook.setAdapter(adapter);
 
+    }
+
+    @Override
+    public void saveContentData(ContentData contentData) {
+        String title = contentData.getTitle();
+        String contnet = contentData.getContent();
+        long date = contentData.getDate();
+        String startBible = contentData.getStartBible();
+        int startChapter = contentData.getStartChapter();
+        int startVers = contentData.getStartVers();
+        String finishBible = contentData.getFinishBible();
+        int finishChapter = contentData.getFinishChapter();
+        int finishVers = contentData.getFinishVers();
+        int qtDate = contentData.getQtDate();
+
+
+        Content contentDB = new Content(title,contnet,date,startBible,startChapter,startVers,finishBible,finishChapter,finishVers,qtDate);
     }
 
 }

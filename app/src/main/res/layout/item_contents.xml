@@ -89,7 +89,7 @@
                 android:text=":"
                 />
             <TextView
-                android:id="@+id/item_startVerb"
+                android:id="@+id/item_startVers"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/textBlack"
@@ -141,7 +141,7 @@
                 android:text=":"
                 />
             <TextView
-                android:id="@+id/item_finishVerb"
+                android:id="@+id/item_finishVers"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/textBlack"

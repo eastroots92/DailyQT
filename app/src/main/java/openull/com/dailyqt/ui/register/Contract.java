@@ -21,6 +21,7 @@ interface Contract {
 
         void initBibleForm(Spinner startBook, Spinner finishBook);
 
+        void saveContentData(ContentData contentData);
     }
 
 }
