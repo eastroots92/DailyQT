@@ -1,5 +1,10 @@
 package openull.com.dailyqt.ui.register;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import java.util.Date;
+
 /**
  * Created by eastroots92 on 2018-03-22.
  */
@@ -15,6 +20,20 @@ public class ContentData {
     private String finishBible ;
     private int finishChapter = 0;
     private int finishVers = 0;
+
+    public int getQtDate() {
+        return qtDate;
+    }
+
+    public void setQtDate(long date) {
+        long myDate = date;
+        long today = getDate();
+//  TODO :  제일중요!!! Dday 계산하는 것 넣어야합니다!!!!!!!!!! 현재 이거 할 차례
+        // https://www.youtube.com/watch?v=CTBiwKlO5IU    37:46
+        this.qtDate = qtDate;
+    }
+
+    private int qtDate = 0;
 
     public String getTitle() {
         return title;

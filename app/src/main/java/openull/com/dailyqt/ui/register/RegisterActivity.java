@@ -2,6 +2,7 @@ package openull.com.dailyqt.ui.register;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.Log;
@@ -193,6 +194,11 @@ public class RegisterActivity extends BaseActivity<Contract.Presenter> implement
 
     private void RegisterManger(boolean isRegisterReady) {
         if(isRegisterReady){
+
+            SharedPreferences sharedPref = getSharedPreferences("userData", Context.MODE_PRIVATE);
+            long myDate = sharedPref.getLong("userDate",0);
+            contentData.setQtDate(myDate);
+
             Toast.makeText(this, "말씀이 등록 되었습니다.", Toast.LENGTH_SHORT).show();
             finish();
         }else{
