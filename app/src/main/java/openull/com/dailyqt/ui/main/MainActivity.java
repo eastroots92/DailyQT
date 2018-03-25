@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityMainBinding;
+import openull.com.dailyqt.db.ContentDatabase;
 import openull.com.dailyqt.model.Content;
 import openull.com.dailyqt.ui.base.BaseActivity;
 import openull.com.dailyqt.ui.register.RegisterActivity;
@@ -24,6 +25,8 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
 
     private ActivityMainBinding binding;
     private RecyclerView.Adapter contentAdapter;
+
+    ContentDatabase contentDB;
 
 
     private List<Content> contents;
@@ -81,7 +84,11 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
     private void contentChecker() {
 //        TODO : 리싸이클러 뷰, Content DB를 통해 데이터가 있으면 리사이클러 뷰를 동작한다.
 
+        contentDB = Room.databaseBuilder(getApplicationContext(), ContentDatabase.class, "content_database")
+                .allowMainThreadQueries()
+                .build();
 
+        contents = contentDB.getContentDao().getAllContent();
 
         int contentCount = 1;
         if( contentCount != 0){
