@@ -1,10 +1,12 @@
 package openull.com.dailyqt.ui.register;
 
 
+import android.arch.persistence.room.Room;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import openull.com.dailyqt.R;
+import openull.com.dailyqt.db.ContentDatabase;
 import openull.com.dailyqt.model.Content;
 
 
@@ -37,7 +39,7 @@ public class RegisterPresenter implements Contract.Presenter {
     }
 
     @Override
-    public void saveContentData(ContentData contentData) {
+    public void setContentData(ContentDatabase contentDB, ContentData contentData) {
         String title = contentData.getTitle();
         String contnet = contentData.getContent();
         long date = contentData.getDate();
@@ -49,8 +51,10 @@ public class RegisterPresenter implements Contract.Presenter {
         int finishVers = contentData.getFinishVers();
         int qtDate = contentData.getQtDate();
 
+        contentDB.getContentDao().insertContents(new Content(title,contnet,date,startBible,startChapter,startVers,finishBible,finishChapter,finishVers,qtDate));
 
-        Content contentDB = new Content(title,contnet,date,startBible,startChapter,startVers,finishBible,finishChapter,finishVers,qtDate);
     }
+
+
 
 }

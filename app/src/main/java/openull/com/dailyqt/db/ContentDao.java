@@ -19,8 +19,8 @@ public interface ContentDao {
     @Query("Select * FROM content")
     List<Content> getAllContent();
 
-    @Query("SELECT * FROM content WHERE id = :contentId LIMIT 1 ")
-    List<Content> getContent(String id);
+//    @Query("SELECT * FROM content WHERE id = :contentId LIMIT 1 ")
+//    List<Content> getContent(String id);
 
     @Insert
     void insertContents(Content... contents);

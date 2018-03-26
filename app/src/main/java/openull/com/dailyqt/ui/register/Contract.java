@@ -3,6 +3,8 @@ package openull.com.dailyqt.ui.register;
 import android.content.Context;
 import android.widget.Spinner;
 
+import openull.com.dailyqt.db.ContentDatabase;
+
 /**
  * Created by eastroots92 on 2018-03-22.
  */
@@ -21,7 +23,7 @@ interface Contract {
 
         void initBibleForm(Spinner startBook, Spinner finishBook);
 
-        void saveContentData(ContentData contentData);
+        void setContentData(ContentDatabase contentDB, ContentData contentData);
     }
 
 }

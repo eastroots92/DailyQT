@@ -90,7 +90,7 @@ public class MainActivity extends BaseActivity<Contract.Presenter> implements Co
 
         contents = contentDB.getContentDao().getAllContent();
 
-        int contentCount = 1;
+        int contentCount = contents.size();
         if( contentCount != 0){
             initContent();
         }else{

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import openull.com.dailyqt.R;
+import openull.com.dailyqt.databinding.ItemContentsBinding;
 import openull.com.dailyqt.model.Content;
 
 /**
@@ -17,6 +18,8 @@ import openull.com.dailyqt.model.Content;
  */
 
 class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHolder> {
+
+
     List<Content> contents;
 
     public ContentAdapter(List<Content> contents) {

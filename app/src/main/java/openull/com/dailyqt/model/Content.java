@@ -3,7 +3,7 @@ package openull.com.dailyqt.model;
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.ColorInt;
+
 
 /**
  * Created by eastroots92 on 2018-03-23.

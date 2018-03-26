@@ -1,5 +1,6 @@
 package openull.com.dailyqt.ui.register;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
@@ -18,6 +19,7 @@ import java.util.Date;
 
 import openull.com.dailyqt.R;
 import openull.com.dailyqt.databinding.ActivityRegisterBinding;
+import openull.com.dailyqt.db.ContentDatabase;
 import openull.com.dailyqt.ui.base.BaseActivity;
 
 /**
@@ -196,13 +198,22 @@ public class RegisterActivity extends BaseActivity<Contract.Presenter> implement
             long myDate = sharedPref.getLong("userDate",0);
             contentData.setQtDate(myDate);
 
-            presenter.saveContentData(contentData);
+            saveContentData();
+
 
             Toast.makeText(this, "말씀이 등록 되었습니다.", Toast.LENGTH_SHORT).show();
             finish();
         }else{
             Toast.makeText(this, "아직 입력되지 않은 내용이 있습니다.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void saveContentData() {
+        ContentDatabase contentDB = Room.databaseBuilder(getApplicationContext(), ContentDatabase.class, "ContentsDatabase")
+                .allowMainThreadQueries()
+                .build();
+        
+        presenter.setContentData(contentDB,contentData);
     }
 
     private boolean isRegisterReady() {
