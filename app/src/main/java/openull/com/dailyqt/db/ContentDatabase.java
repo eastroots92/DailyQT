@@ -15,24 +15,6 @@ import openull.com.dailyqt.model.Content;
 @Database(entities = {Content.class}, version = 1)
 public abstract class ContentDatabase extends RoomDatabase {
 
-    private static ContentDatabase instance;
-
-    public static ContentDatabase getInstance(Context context) {
-        if (instance == null){
-           instance = Room.databaseBuilder(
-                   context.getApplicationContext(),
-                   ContentDatabase.class,
-                   "ContentsDatabase"
-           ).build();
-        }
-        return instance;
-    }
-
-    public static void destoryInstance() {
-        instance = null;
-    }
-
-
     public abstract ContentDao getContentDao();
 
 }

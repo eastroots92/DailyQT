@@ -209,10 +209,10 @@ public class RegisterActivity extends BaseActivity<Contract.Presenter> implement
     }
 
     private void saveContentData() {
-        ContentDatabase contentDB = Room.databaseBuilder(getApplicationContext(), ContentDatabase.class, "ContentsDatabase")
+        ContentDatabase contentDB = Room.databaseBuilder(getApplicationContext(), ContentDatabase.class, "content_database")
                 .allowMainThreadQueries()
                 .build();
-        
+
         presenter.setContentData(contentDB,contentData);
     }
 

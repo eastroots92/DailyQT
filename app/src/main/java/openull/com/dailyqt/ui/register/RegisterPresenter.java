@@ -2,6 +2,7 @@ package openull.com.dailyqt.ui.register;
 
 
 import android.arch.persistence.room.Room;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -53,6 +54,7 @@ public class RegisterPresenter implements Contract.Presenter {
 
         contentDB.getContentDao().insertContents(new Content(title,contnet,date,startBible,startChapter,startVers,finishBible,finishChapter,finishVers,qtDate));
 
+        Log.e("테스트", "디비 성공?");
     }
 
 
