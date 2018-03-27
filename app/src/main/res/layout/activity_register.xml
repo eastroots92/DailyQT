@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundWhite"
+        >
+
+        <include
+            android:id="@+id/toolbar_register"
+            layout="@layout/toolbar_register"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="0.1dp"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:layout_marginRight="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:background="@drawable/border_line"
+            android:padding="@dimen/margin_inner"
+            >
+
+            <EditText
+                android:id="@+id/editText_title"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:textSize="@dimen/text_inner_middle"
+                android:textColor="@color/textBlack"
+                android:background="@null"
+                android:hint="제목"
+                android:textColorHint="@color/noneColor"
+                android:fontFamily="@font/nanum_myeongjo"
+                android:gravity="left|center_vertical"
+                android:lines="1"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/noneColor"
+                />
+
+            <EditText
+                android:id="@+id/editText_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_inner_middle"
+                android:textColor="@color/textBlack"
+                android:background="@null"
+                android:hint="말씀을 입력하세요."
+                android:textColorHint="@color/noneColor"
+                android:fontFamily="@font/nanum_myeongjo"
+                android:gravity="top"
+                android:paddingTop="15dp"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1.2"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <Spinner
+                        android:id="@+id/start_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:background="@color/backgroundRegisterWhite"
+                        />
+
+                    <EditText
+                        android:id="@+id/start_chapter"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="right|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textColor="@color/textBlack"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        />
+
+                    <EditText
+                        android:id="@+id/start_vers"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="left|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
+                
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1.5dp"
+                    android:background="@color/textBlack"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    >
+
+                    <Spinner
+                        android:id="@+id/finish_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:background="@color/backgroundRegisterWhite"
+                        />
+
+                    <EditText
+                        android:id="@+id/finish_chapter"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="right|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=":"
+                        android:textColor="@color/textBlack"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        />
+
+                    <EditText
+                        android:id="@+id/finish_vers"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:textSize="@dimen/text_inner_small_between_middle"
+                        android:textColor="@color/textBlack"
+                        android:hint="1"
+                        android:textColorHint="@color/noneColor"
+                        android:gravity="left|center_vertical"
+                        android:padding="3dp"
+                        android:fontFamily="@font/nanum_myeongjo_bold"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

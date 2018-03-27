@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/backgroundWhite"
+            android:id="@+id/activity_intro_step2"
+            android:padding="@dimen/margin_large"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/textBlack"
+                android:text="@string/intro_nameInfo"
+                android:id="@+id/intro_nameInfo"
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/textBlack"
+                android:gravity="end"
+                android:id="@+id/intro_nameForm_end"
+                android:text="이야."
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+
+                />
+
+            <View
+                android:layout_width="210dp"
+                android:layout_height="1.3dp"
+                android:background="@color/noneColor"
+                android:layout_marginBottom="7.7dp"
+                android:id="@+id/intro_nameForm_underBar"
+                android:layout_above="@+id/intro_nameForm_end"
+                android:layout_alignParentRight="true"
+
+                />
+
+            <EditText
+                android:id="@+id/intro_nameForm_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/noneColor"
+                android:hint="@string/sample_name"
+                android:lines="1"
+                android:textSize="22sp"
+                android:textColor="@color/textBlack"
+                android:background="@null"
+                android:layout_above="@+id/intro_nameForm_underBar"
+                android:maxLength="10"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_middle"
+                android:textColor="@color/textBlack"
+                android:gravity="end"
+                android:text="@string/intro_nameForm"
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                android:layout_above="@+id/intro_nameForm_editText"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/noneColor"
+            android:id="@+id/linearLayout_button"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/backgroundWhite"
+                android:text="@string/introStart_button"
+                android:textSize="20sp"
+                android:fontFamily="@font/nanum_myeongjo_bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

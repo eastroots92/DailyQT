@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolBar_height"
+        android:background="@color/backgroundWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/textBlack"
+            android:text="뒤로가기"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:textSize="@dimen/text_inner_small"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textBlack"
+            android:text="글쓰기"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:textSize="@dimen/text_inner_middle"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/textView_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/textBlack"
+            android:text="등록하기"
+            android:fontFamily="@font/nanum_myeongjo_bold"
+            android:textSize="@dimen/text_inner_small"
+            android:layout_weight="1"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+    </LinearLayout>
+</layout>
